@@ -8,21 +8,29 @@
  */
 
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import Header from '../../components/layout/header/Header';
+import Footer from '../../components/layout/footer/Footer';
+import Content from '../../components/layout/content/Content';
+import Contact from '../../components/layout/contact/Contact';
+import DieuhuongURL from '../../components/router/DieuhuongURL';
+
 
 import GlobalStyle from '../../global-styles';
 
 export default function App() {
   return (
     <div>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route component={NotFoundPage} />
-      </Switch>
-      <GlobalStyle />
+      <Router>
+          <Header/>
+          <DieuhuongURL/>
+          <Footer/>
+          <GlobalStyle />
+      </Router>
+      
     </div>
   );
 }

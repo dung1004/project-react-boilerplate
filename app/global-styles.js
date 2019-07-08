@@ -26,7 +26,106 @@ const GlobalStyle = createGlobalStyle`
     font-family: Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5em;
   }
-  
+
+  // css menu
+  a.active {
+    background: white;
+    color: black;
+  }
+  ul {display: flex;}
+  ul li {list-style: none;}
+  ul li a {
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+
+  .MuiToolbar-root.MuiToolbar-regular.menu.MuiToolbar-gutters {
+    justify-content: space-between;
+    padding: 20px 150px;
+}
+.menu .MuiTypography-h6 {
+  font-weight: 900;
+  font-size: 26px;
+}
+/*content */
+section { 
+  padding: 30px 150px 50px;
+}
+.tieude {
+  text-align: center;
+}
+/*contact*/
+form {
+	text-align: center;
+}
+.form-group {
+	padding: 0 230px;
+}
+.form-group label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 10px
+}
+.form-group input {
+    width: 100%;
+    display: block;
+    border-radius: 3px;
+    border: 1px solid #ff980096;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+button.btn {
+    background: tomato;
+    color: #1c1f1bf2;
+    border: none;
+    padding: 10px 25px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    position: relative;
+    z-index: 1
+}
+button.btn:after{
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 60%;
+    height: 100%;
+    transform: translateX(-50%);
+    background: seagreen;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+    display: block;
+    z-index: -1
+}
+button.btn:hover {
+	background: transparent; 
+	transition: .3s ease-in-out;
+	color: white;
+}
+button.btn:hover:after{
+	width: 100%;
+	visibility: visible;
+	opacity: 1;
+
+}
+
+/*Footer*/
+footer {
+    background: seagreen;
+    color: white;
+    text-align: center;
+    word-spacing: 5px;
+    padding: 20px 150px;
+}
+
 `;
 
 export default GlobalStyle;
