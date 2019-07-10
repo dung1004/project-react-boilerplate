@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /**
  *
  * App.js
@@ -8,14 +9,9 @@
  */
 
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
-import HomePage from 'containers/HomePage/Loadable';
-import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import { BrowserRouter as Router} from "react-router-dom";
 import Header from '../../components/layout/header/Header';
 import Footer from '../../components/layout/footer/Footer';
-import Content from '../../components/layout/content/Content';
-import Contact from '../../components/layout/contact/Contact';
 import DieuhuongURL from '../../components/router/DieuhuongURL';
 
 
@@ -25,10 +21,10 @@ export default function App() {
   return (
     <div>
       <Router>
-          <Header/>
-          <DieuhuongURL/>
-          <Footer/>
-          <GlobalStyle />
+        <Header/>
+        <DieuhuongURL/>
+        <Footer/>
+        <GlobalStyle />
       </Router>
       
     </div>

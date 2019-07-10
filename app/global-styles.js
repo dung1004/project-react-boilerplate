@@ -61,6 +61,13 @@ section {
 form {
 	text-align: center;
 }
+span.err {
+  font-size: 12px;
+  margin: 10px 0 0;
+  color: red;
+  display: block;
+  text-align: left;
+}
 .form-group {
 	padding: 0 230px;
 }
@@ -80,7 +87,7 @@ form {
 }
 button.btn {
     background: tomato;
-    color: #1c1f1bf2;
+    color: #000000;
     border: none;
     padding: 10px 25px;
     font-size: 15px;
@@ -88,7 +95,11 @@ button.btn {
     cursor: pointer;
     transition: .3s ease-in-out;
     position: relative;
-    z-index: 1
+    z-index: 1;
+    border-radius: 20px;
+    display: inherit
+    margin: 15px auto 0;
+    outline: none;
 }
 button.btn:after{
 	content: '';
@@ -124,8 +135,22 @@ footer {
     text-align: center;
     word-spacing: 5px;
     padding: 20px 150px;
+    margin-top: 30px;
 }
-
+.MuiIcon-fontSizeSmall {
+  font-size: 2.25rem;
+}
+td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-paddingNone {
+  width: 90px;
+}
+a.MuiTypography-root.MuiLink-root.MuiLink-underlineHover.MuiTypography-colorPrimary {
+  background: tomato;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  font-size: 12px;
+}
 `;
 
 export default GlobalStyle;

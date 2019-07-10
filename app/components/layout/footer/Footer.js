@@ -1,13 +1,14 @@
+/* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
 
 class Footer extends Component {
-    render() {
-        return (
-            <footer>
-                <p>Copyright by NguyenDung 2019</p>
-            </footer>
-        );
-    }
+  render() {
+    return (
+      <footer>
+        <p>Copyright by NguyenDung 2019</p>
+      </footer>
+    );
+  }
 }
 
 export default Footer;
