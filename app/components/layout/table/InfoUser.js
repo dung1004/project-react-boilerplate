@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-redeclare */
 /* eslint-disable array-callback-return */
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-sequences */
@@ -33,7 +35,13 @@ class InfoUser extends Component {
     
      // eslint-disable-next-line radix
     // eslint-disable-next-line no-var
-    var idUrl = parseInt(this.props.location.pathname.slice(9, 1000));
+    var idString = this.props.location.pathname;
+    var kq = idString.match(/\d/g);
+
+    var  idUrl = parseInt(kq);
+        
+
+    // var idUrl = parseInt(this.props.location.pathname.slice(9, 1000));
     // eslint-disable-next-line no-var
 
     const { arr } = this.state;
@@ -45,7 +53,13 @@ class InfoUser extends Component {
             arr.map((value) => {
               if(value.id === idUrl) {
                 return (
-                  "Id là: " +  value.id + "; Name là: "+ value.name + "; UserName là: " + value.username + "; Email là: " + value.email 
+                  <div>
+                     <li>Id là: <b style={{color: 'red'}}>{value.id}</b></li>
+                     <li>name là: <b style={{color: 'red'}}>{value.name}</b></li>
+                     <li>username là: <b style={{color: 'red'}}>{value.username}</b></li>
+                     <li>email là: <b style={{color: 'red'}}>{value.email}</b></li>
+                  </div>
+                 
                 )
                 
               }
